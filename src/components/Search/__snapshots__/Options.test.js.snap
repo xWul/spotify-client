@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renderer without crash with selected album 1`] = `
+<div
+  className="sc-htpNat farngo"
+>
+  <div
+    className="sc-bdVaJa LDKxg"
+  >
+    <select
+      className="sc-bwzfXH fGrHko"
+      selected="album"
+      value="album"
+    >
+      <option
+        value="artist"
+      >
+        Artists
+      </option>
+      <option
+        value="album"
+      >
+        Albums
+      </option>
+      <option
+        value="track"
+      >
+        Tracks
+      </option>
+    </select>
+  </div>
+</div>
+`;
