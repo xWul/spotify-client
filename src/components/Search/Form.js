@@ -19,12 +19,19 @@ const FormStyled = styled.form`
 
 class Form extends Component {
   static defaultProps = {
-    onSubmit: () => {}
+    onSubmit: () => {},
+    option: 'artist',
+    query: ''
   }
 
   state = {
-    option: 'artist',
+    option: '',
     query: ''
+  }
+
+  componentDidMount () {
+    const { option, query } = this.props
+    this.setState({option: option, query: query})
   }
 
   handleChange = ({target: {name, value}}) =>{

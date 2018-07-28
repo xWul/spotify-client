@@ -28,10 +28,14 @@ class Search extends Component {
 
   render() {
     const { errorMessage } = this.state
+    const { option, query } = this.props
     return (
       <Container>
          {errorMessage && <Alert>{errorMessage}</Alert>}
-        <Form onSubmit={(event) => this.redirect(event)} />
+        <Form
+          onSubmit={(event) => this.redirect(event)}
+          option={option}
+          query={query}/>
       </Container>
     )
   }
