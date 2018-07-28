@@ -1,59 +1,36 @@
 /* LIBS */
 import React, { Component } from 'react'
 import styled from 'styled-components'
-/* CONFIG */
-import { screens } from '../../theme/globalStyle'
 /* COMPONENTS */
-import Options from './Options'
-import InputText from '../ui/InputText'
-import Button from '../ui/Button'
+import Form from './Form'
+import Alert from '../ui/Alert'
 
-const Form = styled.form`
+const Container = styled.div`
   display: flex;
-  flex-direction: row
+  flex-wrap: wrap;
   width: 100%;
-  @media(max-width: ${screens.small}) {
-    flex-wrap: wrap;
-  }
 `
 
 class Search extends Component {
-  static defaultProps = {
-    onSubmit: () => {}
-  }
+  state = { errorMessage: false }
 
-  state = {
-    option: 'artist',
-    query: ''
-  }
+  redirect = ({ query, option }) =>{
+    this.setState({errorMessage: false})
 
-  handleChange = ({target: {name, value}}) =>{
-    this.setState({[name]: value})
-  }
-
-  submit = (event) => {
-    event.preventDefault()
-    const { query, option } = this.state
-    this.props.onSubmit({ query, option })
+    if (query === '') {
+      this.setState({errorMessage: 'Enter the name of an artist, album or track.'})
+    } else {
+      this.props.history.push(`/${option}/${encodeURI(query)}`)
+    }
   }
 
   render() {
-    const { query, option } = this.state
+    const { errorMessage } = this.state
     return (
-      <Form method={'POST'} onSubmit={(event) => this.submit(event)}>
-        <Options
-          onChange={this.handleChange}
-          name={'option'}
-          selected={option}/>
-        <InputText
-          onChange={this.handleChange}
-          name={'query'}
-          value={query}
-          placeholder={'Search for Artists, Albums or Tracks...'} />
-        <Button type={'submit'}>
-          Search
-        </Button>
-      </Form>
+      <Container>
+         {errorMessage && <Alert>{errorMessage}</Alert>}
+        <Form onSubmit={(event) => this.redirect(event)} />
+      </Container>
     )
   }
 }
