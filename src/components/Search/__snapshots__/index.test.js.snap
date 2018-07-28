@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Search renderer without crash 1`] = `
+<form
+  className="sc-gzVnrw cAeJnK"
+  method="POST"
+  onSubmit={[Function]}
+>
+  <div
+    className="sc-htpNat farngo"
+  >
+    <div
+      className="sc-bdVaJa LDKxg"
+    >
+      <select
+        className="sc-bwzfXH fGrHko"
+        name="option"
+        onChange={[Function]}
+        selected="artist"
+        value="artist"
+      >
+        <option
+          value="artist"
+        >
+          Artists
+        </option>
+        <option
+          value="album"
+        >
+          Albums
+        </option>
+        <option
+          value="track"
+        >
+          Tracks
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    className="sc-bxivhb kBJQUN"
+  >
+    <input
+      className="sc-ifAKCX hfbosk"
+      name="query"
+      onChange={[Function]}
+      placeholder="Search for Artists, Albums or Tracks..."
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="sc-EHOje kVUZme"
+  >
+    <button
+      className="sc-bZQynM EzSAD"
+      type="submit"
+    >
+      Search
+    </button>
+  </div>
+</form>
+`;
