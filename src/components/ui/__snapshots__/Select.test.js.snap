@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renderer without crash 1`] = `
+<div
+  className="sc-bdVaJa LDKxg"
+>
+  <select
+    className="sc-bwzfXH fGrHko"
+  >
+    <option
+      value="1"
+    >
+      1
+    </option>
+    <option
+      value="2"
+    >
+      2
+    </option>
+  </select>
+</div>
+`;
