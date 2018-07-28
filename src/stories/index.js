@@ -10,6 +10,8 @@ import globalStyle  from '../theme/globalStyle'
 import Select from '../components/ui/Select'
 import InputText from '../components/ui/InputText'
 import Button from '../components/ui/Button'
+import Alert from '../components/Alert'
+import Loader from '../components/Loader'
 
 /* COMPONENTS */
 import Options from '../components/Search/Options'
@@ -21,6 +23,9 @@ storiesOf('UI', module)
   .add('Select', () => <Select><option>Option 1</option></Select>)
   .add('Input Text', () => <InputText placeholder={'Type what you want'}/>)
   .add('Button', () => <Button>Click</Button>)
+  .add('Alert', () => <Alert>this is a error message</Alert>)
+  .add('Loader', () => <Loader />)
+  
 
 storiesOf('Search', module)
   .add('Options', () => <Options onChange={action('changed')} />)

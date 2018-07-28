@@ -1,9 +1,10 @@
 /* LIBS */
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { withRouter } from 'react-router-dom'
 /* COMPONENTS */
 import Form from './Form'
-import Alert from '../ui/Alert'
+import Alert from '../Alert'
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,8 @@ class Search extends Component {
     if (query === '') {
       this.setState({errorMessage: 'Enter the name of an artist, album or track.'})
     } else {
-      this.props.history.push(`/${option}/${encodeURI(query)}`)
+      const url = `/${option}/${encodeURIComponent(query)}`
+      this.props.history.push(url)
     }
   }
 
@@ -35,4 +37,4 @@ class Search extends Component {
   }
 }
 
-export default Search
+export default withRouter(Search)

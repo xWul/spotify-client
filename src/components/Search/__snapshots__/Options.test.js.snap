@@ -8,7 +8,7 @@ exports[`Select renderer without crash with selected album 1`] = `
     className="sc-bdVaJa LDKxg"
   >
     <select
-      className="sc-bwzfXH fGrHko"
+      className="sc-bwzfXH ljcehE"
       selected="album"
       value="album"
     >

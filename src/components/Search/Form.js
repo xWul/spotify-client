@@ -38,7 +38,7 @@ class Form extends Component {
   }
 
   render() {
-    const { query, option, errorMessage } = this.state
+    const { query, option } = this.state
     return (
       <FormStyled 
         method={'POST'}
