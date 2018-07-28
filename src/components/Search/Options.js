@@ -1,5 +1,5 @@
 /* LIBS */
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 /* CONFIG */
 import { screens } from '../../theme/globalStyle'
