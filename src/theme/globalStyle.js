@@ -5,13 +5,16 @@ const defaultStyles = () => injectGlobal`
  * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    transition:all 0.3s ease;
+ }
+ 
+ body: {
+  background-color: #333;
  }
 `
 
 export const screens = {
-  smallExtra: '480px', 
-  small: '768px', 
+  smallExtra: '480px',
+  small: '768px',
   medium: '992px',
   large: '1200px'
 }

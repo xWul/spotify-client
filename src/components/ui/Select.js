@@ -11,9 +11,9 @@ const SelectStyled = styled.select`
   cursor: pointer;
   padding: 5px;
   width: 100%;
-  border: 1px solid #CCC;
+  border: 1px solid #333;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 18px;
 `
 
 const Select = (props) => {

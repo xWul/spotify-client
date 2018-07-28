@@ -10,9 +10,9 @@ const Input = styled.input`
   background-color: #FFF;
   padding: 6px;
   width: 100%;
-  border: 1px solid #CCC;
+  border: 1px solid #333;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 18px;
 `
 
 const InputText = (props) => {
