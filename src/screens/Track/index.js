@@ -21,52 +21,52 @@ const Container = styled.main`
   }
 `
 
-class Album extends Component {
+class Track extends Component {
   state = {
-    albums: [],
+    tracks: [],
     isLoading: false,
     errorMessage: false
   }
 
   componentDidMount() {
     const { query } = this.props.match.params
-    this.fetchAlbum(query)
+    this.fetchTracks(query)
   }
 
   componentWillReceiveProps(props) {
     const { query } = props.match.params
-    this.fetchAlbum(query)
+    this.fetchTracks(query)
   }
 
-  fetchAlbum = (query) => {
+  fetchTracks = (query) => {
     this.setState({isLoading: true})
     const spotify = new SpotifyWrapper({
       token: TOKEN
     })
-    spotify.search.albums(query)
+    spotify.search.tracks(query)
     .then(data => {
       this.setState({isLoading: false})
       if (data.error) {
         this.setState({errorMessage: data.error.message})
       }else {
-        this.setState({albums: data.albums.items})
+        this.setState({tracks: data.tracks.items})
       }
     })
   }
 
   render() {
     const { query } = this.props.match.params
-    const { albums, isLoading, errorMessage } = this.state
+    const { tracks, isLoading, errorMessage } = this.state
     return (
       <Container>
         {isLoading && <Loader/> }
-        <Search option={'album'} query={query} />
+        <Search option={'track'} query={query} />
         {errorMessage && <Alert>{errorMessage}</Alert>}
-        <List items={albums} />
+        {tracks.length > 0 ? <List items={tracks} /> : null}
       </Container>
     )
   }
 }
 
 
-export default withRouter(Album)
+export default withRouter(Track)

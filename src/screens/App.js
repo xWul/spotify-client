@@ -18,7 +18,7 @@ const Container = styled.main`
 
 class App extends Component {
   componentDidMount() {
-    const authURL = 'https://accounts.spotify.com/authorize?client_id=734facdc5d78467f87ff591c51e18345&response_type=token&redirect_uri=http://localhost:3000'
+    const authURL = 'https://accounts.spotify.com/authorize?client_id=734facdc5d78467f87ff591c51e18345&response_type=token&redirect_uri=http://192.168.15.12:3000/'
     let hashParams = {};
     let e, r = /([^&;=]+)=?([^&;]*)/g,
       q = window.location.hash.substring(1);

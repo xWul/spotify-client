@@ -23,6 +23,7 @@ export default class SpotifyWrapper {
     return window.fetch(url, headers)
           .then((data) => {
             if (data.status === 401) {
+              window.localStorage.removeItem('token')
               window.location.href = '/'
             } else {
               return data.json()

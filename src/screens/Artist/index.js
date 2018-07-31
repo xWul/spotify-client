@@ -17,7 +17,7 @@ const Container = styled.main`
   background-color: #1D1D1D;
   padding: 40px 10%;
   @media(max-width: ${screens.small}) {
-    padding: 0 5%;
+    padding: 40px 5% 100px 5%;
   }
 `
 
