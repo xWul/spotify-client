@@ -5,8 +5,7 @@ import { screens } from '../../theme/globalStyle'
 import { setFavorite, removeFavorite, getFavorites } from '../../utils'
 /* COMPONENTS */
 import LikeButton from '../../components/LikeButton'
-import Popularity from './Popularity'
-import Albums from './Albums'
+import Tracks from './Tracks'
 
 const Card = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -44,33 +43,37 @@ const Header = styled.div`
   align-items: center;
 `
 
-const Genders = styled.p` 
-  font-size: 14px;
-  color: #666;
-  width: 100%;
-  padding: 5px 0; 
-`
-
 const CardInfo = styled.div`
   padding: 10px; 
   font-size: 14px;
   width: 100%;
   min-height: 140px;
 `
+const AvalLabel = styled.span`
+  color: ${props => props.aval ? 'green' : '#CCC'};
+`
 
-const genresList = (items) => {
-  return items.map(genre => genre).join(', ')
+const Artists = ({items}) => { 
+  return items.length >= 3 
+    ? <p>Various artists</p> 
+    : <p>{items.map(artist => artist.name).join(', ')}</p>
 }
 
-class ArtistCard extends Component {
+const Availability = ({availabilities}) => {
+  return availabilities.includes('BR') 
+    ? <AvalLabel aval={true}>Available</AvalLabel> 
+    : <AvalLabel aval={false}>Not Available</AvalLabel>
+}
+
+class AlbumCard extends Component {
   state = { 
     isFavorite: false,
-    showAlbums: false 
+    showTracks: false 
   }
 
   componentDidMount() {
-    const { id } = this.props.artist
-    const favorites = getFavorites()['artists'] || []
+    const { id } = this.props.album
+    const favorites = getFavorites()['albums'] || []
     if (favorites.includes(id)) {
       this.setState({isFavorite: true})
     }
@@ -82,24 +85,24 @@ class ArtistCard extends Component {
     }), () => {
       const {isFavorite} = this.state
       isFavorite 
-        ? setFavorite('artists', id) 
-        : removeFavorite('artists', id)
+        ? setFavorite('albums', id) 
+        : removeFavorite('albums', id)
     })
   }
 
-  toggleAlbums = () => {
-    this.setState(({ showAlbums }) => ({
-      showAlbums: !showAlbums
+  toggleTracks = () => {
+    this.setState(({ showTracks }) => ({
+      showTracks: !showTracks
     }))
   }
 
   render() {
-    const { id, name, images, genres, popularity } = this.props.artist
-    const { isFavorite, showAlbums } = this.state
+    const { id, name, images, artists, available_markets } = this.props.album
+    const { isFavorite, showTracks } = this.state
     return (
       <Card>
-        {showAlbums && <Albums id={id} onClose={this.toggleAlbums} />}
-        <Picture images={images} onClick={this.toggleAlbums} />
+        {showTracks && <Tracks id={id} onClose={this.toggleTracks} />}
+        <Picture images={images} onClick={this.toggleTracks} />
         <CardInfo>
           <Header>
             <Title>{name}</Title>
@@ -107,12 +110,12 @@ class ArtistCard extends Component {
               onClick={() => this.toggleFavorite(id)}
               isChecked={isFavorite}/>
           </Header>
-          <Popularity popularity={popularity} />
-          <Genders>{genresList(genres)}</Genders>
+          <Artists items={artists} />
+          <Availability availabilities={available_markets}/>
         </CardInfo>
       </Card>
     )
   }
 }
 
-export default ArtistCard
+export default AlbumCard

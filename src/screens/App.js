@@ -27,6 +27,9 @@ class App extends Component {
       hashParams[e[1]] = decodeURIComponent(e[2]);
     }
 
+    if (window.localStorage.getItem('token')) {
+      hashParams.access_token = window.localStorage.getItem('token')
+    }
     if (!hashParams.access_token) {
       window.location.href = authURL;
     } else {
