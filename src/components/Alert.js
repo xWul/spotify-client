@@ -16,7 +16,6 @@ const Alert = styled.div`
   line-height: normal;
   opacity: 1;
   transition: all 0.3s ease;
-  width: 100%;
   justify-content: center;
 `
 
