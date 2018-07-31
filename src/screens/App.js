@@ -2,6 +2,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { screens } from '../theme/globalStyle'
+/* UTILS */
+import { getQueryParams } from './utils'
+import AUTH_URL from '../api/auth'
 /* COMPONENTS */
 import Search from '../components/Search'
 
@@ -18,22 +21,14 @@ const Container = styled.main`
 
 class App extends Component {
   componentDidMount() {
-    const authURL = 'https://accounts.spotify.com/authorize?client_id=734facdc5d78467f87ff591c51e18345&response_type=token&redirect_uri=http://192.168.15.12:3000/'
-    let hashParams = {};
-    let e, r = /([^&;=]+)=?([^&;]*)/g,
-      q = window.location.hash.substring(1);
-    // eslint-disable-next-line
-    while (e = r.exec(q)) {
-      hashParams[e[1]] = decodeURIComponent(e[2]);
-    }
-
-    if (window.localStorage.getItem('token')) {
-      hashParams.access_token = window.localStorage.getItem('token')
-    }
-    if (!hashParams.access_token) {
-      window.location.href = authURL;
-    } else {
-      window.localStorage.setItem('token', hashParams.access_token)
+    const token = window.localStorage.getItem('token')
+    if (!token) {
+      const queryParams = getQueryParams(window.location.hash.substring(1))
+      if (queryParams.access_token) {
+        window.localStorage.setItem('token', queryParams.access_token)
+      } else {
+        window.location.href = AUTH_URL
+      }
     }
   }
 
