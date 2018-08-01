@@ -1,7 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 import registerServiceWorker from './registerServiceWorker'
+import globalStyle from './theme/globalStyle'
+import 'reset-css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import Routes from './Routes'
+
+globalStyle()
+
+ReactDOM.render(<Routes />, document.getElementById('root'))
 registerServiceWorker()

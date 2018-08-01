@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album Albums renderer without crashing 1`] = `
+<main
+  className="sc-hMqMXs CuYIp"
+>
+  <div
+    className="sc-iwsKbI lhnNTF"
+  >
+    <div
+      className="sc-gZMcBi bLjqeM"
+    >
+      <div
+        className="sc-gqjmRU jraKAo"
+      />
+    </div>
+  </div>
+  <div
+    className="sc-dnqmqq haujyR"
+  >
+    <form
+      className="sc-htoDjs eCfHdW"
+      method="POST"
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-bxivhb eswVzf"
+      >
+        <div
+          className="sc-bwzfXH cAkfzP"
+        >
+          <select
+            className="sc-htpNat gHkFix"
+            name="option"
+            onChange={[Function]}
+            selected="album"
+            value="album"
+          >
+            <option
+              value="artist"
+            >
+              Artists
+            </option>
+            <option
+              value="album"
+            >
+              Albums
+            </option>
+            <option
+              value="track"
+            >
+              Tracks
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        className="sc-ifAKCX cZUZpM"
+      >
+        <input
+          className="sc-EHOje ghCCNY"
+          name="query"
+          onChange={[Function]}
+          placeholder="Search for Artists, Albums or Tracks..."
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="sc-bZQynM ehozbl"
+      >
+        <button
+          className="sc-gzVnrw eanGCw"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+  <div
+    className="sc-eNQAEJ jRJHuH"
+  />
+</main>
+`;

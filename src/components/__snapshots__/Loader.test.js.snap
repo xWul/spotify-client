@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renderer without crashing 1`] = `
+<div
+  className="sc-bdVaJa dUnqUM"
+>
+  <div
+    className="sc-bwzfXH grFctl"
+  >
+    <div
+      className="sc-htpNat kVgGua"
+    />
+  </div>
+</div>
+`;

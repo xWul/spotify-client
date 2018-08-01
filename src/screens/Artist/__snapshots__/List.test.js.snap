@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Artist Artists List renderer empty 1`] = `
+<div
+  className="sc-fjdhpX hZDsCX"
+/>
+`;
+
+exports[`List Artist Artists List renderer with data 1`] = `
+<div
+  className="sc-fjdhpX hZDsCX"
+>
+  <div
+    className="sc-dnqmqq khaWY"
+  >
+    <div
+      className="sc-iwsKbI ccWMSL"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-jTzLTM ksXUdq"
+    >
+      <div
+        className="sc-gqjmRU PPHDL"
+      >
+        <h3
+          className="sc-gZMcBi gVUJcu"
+        >
+          Test 1
+        </h3>
+        <div
+          className="sc-bwzfXH gICfuL"
+        >
+          <svg
+            className="sc-bdVaJa dUXLKb"
+            onClick={[Function]}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"
+            />
+          </svg>
+        </div>
+      </div>
+      <p
+        className="sc-bxivhb jsvscY"
+      >
+        <span
+          className="sc-htpNat jtShwY"
+          color="#FB5656"
+        >
+          Hot
+        </span>
+      </p>
+      <p
+        className="sc-VigVT iSxPsM"
+      >
+        pop
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-dnqmqq khaWY"
+  >
+    <div
+      className="sc-iwsKbI gjzXRx"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-jTzLTM ksXUdq"
+    >
+      <div
+        className="sc-gqjmRU PPHDL"
+      >
+        <h3
+          className="sc-gZMcBi gVUJcu"
+        >
+          Test 2
+        </h3>
+        <div
+          className="sc-bwzfXH gICfuL"
+        >
+          <svg
+            className="sc-bdVaJa dUXLKb"
+            onClick={[Function]}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"
+            />
+          </svg>
+        </div>
+      </div>
+      <p
+        className="sc-bxivhb jsvscY"
+      >
+        <span
+          className="sc-htpNat jtShwY"
+          color="#FB5656"
+        >
+          Hot
+        </span>
+      </p>
+      <p
+        className="sc-VigVT iSxPsM"
+      >
+        rock, pop
+      </p>
+    </div>
+  </div>
+</div>
+`;
