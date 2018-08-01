@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import globalStyle from './theme/globalStyle'
-import './polyfill'
+import 'core-js'
 import 'reset-css'
 
 import Routes from './Routes'

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "core-js": "2.5.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-loadable": "5.4.0",
