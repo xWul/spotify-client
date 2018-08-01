@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 `
 
-const AlbumsList = ({ items }) => {
+const AlbumsList = ({ items = [] }) => {
   return (
     <Container>
       {

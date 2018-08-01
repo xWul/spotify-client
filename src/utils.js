@@ -17,7 +17,7 @@ export const removeFavorite = (type, id) => {
 }
 
 export const getFavorites = () => {
-  return JSON.parse(window.localStorage.getItem('favorites')) || {}
+  return JSON.parse(window.localStorage.getItem('favorites') || JSON.stringify({})) || {}
 }
 
 const persistFavorites = (data) => {

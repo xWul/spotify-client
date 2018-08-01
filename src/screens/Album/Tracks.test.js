@@ -1,15 +1,17 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 import renderer from 'react-test-renderer'
 import { BrowserRouter as Router } from 'react-router-dom'
-import App from './App'
+import mockFetch from '../../api/mockFetch'
+import Tracks from './Tracks'
 
-describe('App', () => { 
-  test('renders App component', () => {
+describe('Tracks', function () {
+  test('Tracks renderer without crashing', () => {
+    fetch = mockFetch({tracks: []})
     const component = renderer.create(
-      <Router><App /></Router>,
-    )  
+      <Tracks />,
+    )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
+
 })

@@ -1,10 +1,10 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Alert from './Alert'
+import Loader from './Loader'
 
-test('Alert renderer without crashing', () => {
+test('Loader renderer without crashing', () => {
   const component = renderer.create(
-    <Alert>Testing</Alert>,
+    <Loader />,
   )
 
   const tree = component.toJSON()

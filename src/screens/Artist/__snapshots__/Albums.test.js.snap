@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album Artist Artists Album renderer without crashing 1`] = `
+<div
+  className="sc-bdVaJa bxIkKu"
+>
+  <span
+    className="sc-bwzfXH iccCXK"
+    onClick={undefined}
+  >
+    Close
+  </span>
+  <ul
+    className="sc-htpNat daVAfG"
+  />
+  <p
+    className="sc-ifAKCX bnRFRw"
+  >
+    Loading...
+  </p>
+</div>
+`;

@@ -3,7 +3,7 @@ import React from 'react'
 /* COMPONENTS */
 import Card from './Card'
 
-const List = ({ items }) => {
+const List = ({ items = []}) => {
   return (
     <ul>
       {items.map(track => {
