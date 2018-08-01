@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tracks Tracks renderer without crashing 1`] = `
+<div
+  className="sc-bdVaJa bxIkKu"
+>
+  <span
+    className="sc-bwzfXH dykXYE"
+    onClick={undefined}
+  >
+    Close
+  </span>
+  <p
+    className="sc-ifAKCX bnRFRw"
+  >
+    No tracks found.
+  </p>
+  <p
+    className="sc-ifAKCX bnRFRw"
+  >
+    Loading...
+  </p>
+</div>
+`;

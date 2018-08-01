@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popularity Artist Popularity Artist component renderer default 1`] = `
+<p
+  className="sc-bwzfXH jmLrRz"
+>
+  <span
+    className="sc-bdVaJa cnqOZO"
+  >
+    Underground
+  </span>
+</p>
+`;
+
+exports[`Popularity Artist Popularity Artist component renderer default 2`] = `
+<p
+  className="sc-bwzfXH jmLrRz"
+>
+  <span
+    className="sc-bdVaJa diIKEi"
+    color="#FB5656"
+  >
+    Hot
+  </span>
+</p>
+`;

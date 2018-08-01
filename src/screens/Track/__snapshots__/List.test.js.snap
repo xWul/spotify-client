@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Tracks Tracks List renderer empty 1`] = `<ul />`;
+
+exports[`List Tracks Tracks List renderer with data 1`] = `
+<ul>
+  <li
+    className="sc-htpNat ghdpIv"
+  >
+    <img
+      alt="Test 1"
+      src=""
+    />
+    <div
+      className="sc-bxivhb kTsSLv"
+    >
+      <div
+        className="sc-htoDjs fHujIQ"
+      >
+        <h3
+          className="sc-gzVnrw iADqAr"
+        >
+          Test 1
+        </h3>
+        <div
+          className="sc-bwzfXH gICfuL"
+        >
+          <svg
+            className="sc-bdVaJa dUXLKb"
+            onClick={[Function]}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        className="sc-EHOje jibcsp"
+      >
+        Album: 
+        Tests
+      </span>
+      <p
+        className="sc-ifAKCX cPEgCY"
+      >
+        
+      </p>
+      <span
+        className="sc-bZQynM fgJQBP"
+      >
+        Duration: 
+        15:24
+      </span>
+    </div>
+  </li>
+  <li
+    className="sc-htpNat ghdpIv"
+  >
+    <img
+      alt="Test 2"
+      src=""
+    />
+    <div
+      className="sc-bxivhb kTsSLv"
+    >
+      <div
+        className="sc-htoDjs fHujIQ"
+      >
+        <h3
+          className="sc-gzVnrw iADqAr"
+        >
+          Test 2
+        </h3>
+        <div
+          className="sc-bwzfXH gICfuL"
+        >
+          <svg
+            className="sc-bdVaJa dUXLKb"
+            onClick={[Function]}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        className="sc-EHOje jibcsp"
+      >
+        Album: 
+        Test
+      </span>
+      <p
+        className="sc-ifAKCX cPEgCY"
+      >
+        , 
+      </p>
+      <span
+        className="sc-bZQynM fgJQBP"
+      >
+        Duration: 
+        0:22
+      </span>
+    </div>
+  </li>
+</ul>
+`;
